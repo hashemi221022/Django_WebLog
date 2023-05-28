@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+sing up
+{% endblock page_title %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-9">
+                <div class="card shadow my-3 p-5">
+                    <h3>SIGN UP</h3>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <table>
+                            {{form.as_table}}
+                        </table>
+                        <!--    {{form.as_p}}-->
+                        <button type="submit" class="btn btn-primary mt-4">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
